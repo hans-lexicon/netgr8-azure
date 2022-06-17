@@ -1,0 +1,55 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = WebApp
+build_property.RootNamespace = WebApp
+build_property.ProjectDir = C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR8\Lektion-3\WebApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\HansMattin-Lassei\Documents\Utbildning\NETGR8\Lektion-3\WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/Pages/Management.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlbWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/Shared/DeviceItem.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXERldmljZUl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/Shared/DeviceItemDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXERldmljZUl0ZW1EZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/Shared/SiteTitle.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpdGVUaXRsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/Shared/TopMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFRvcE1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-snfefjgk3b
+
+[C:/Users/HansMattin-Lassei/Documents/Utbildning/NETGR8/Lektion-3/WebApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c2wpa7m53j

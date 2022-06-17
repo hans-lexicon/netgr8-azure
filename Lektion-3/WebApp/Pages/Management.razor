@@ -1,0 +1,85 @@
+﻿@page "/"
+
+<PageTitle>Device Management - Admin Center</PageTitle>
+
+
+<div class="d-flex">
+    <div class="deviceitem-list shadow pt-5 bg-white">
+        <div class="px-5">
+            <SiteTitle Title="Device Management" Ingress="Manage all of your devices in one place" />
+
+            @if (devices == null)
+            {
+                <div></div>
+            }
+            else
+            {
+                @foreach(var item in devices)
+                {
+                    <div class="card my-3" @onclick="() => SetSelectedItem(item.Id)">
+                    <div class="card-body">
+                        <div class="small-font">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <i class="fa-solid fa-microchip me-2"></i>
+                                    @item.Id  
+                                </div>
+                                <div>
+                                   @item.Placement 
+                                </div>
+                                <div class="d-flex">
+                                    <div class="me-3"><i class="fa-solid fa-temperature-three-quarters text-secondary  me-1"></i>Temperature (@item.Temperature °C) </div>
+                                    <div><i class="fa-solid fa-droplet text-secondary me-1"></i>Humidity (@item.Humidity %)</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    @if(@item.AlertNotification)
+                                    {
+                                        <i class="fa-solid fa-triangle-exclamation text-warning me-2" style="font-size: 1.1rem;"></i> <span>Temperature is to High</span>
+                                    }               
+                                </div>
+                                <div>
+                                    @if(@item.Online)
+                                    {
+                                        <div class="status-active">active</div>
+                                    }
+                                    else
+                                    {
+                                        <div class="status-inactive">inactive</div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="deviceitem-details">
+        <DeviceItemDetails DeviceId="@selectedDeviceId" />
+    </div>
+</div>
+
+
+
+@code {
+    private DeviceModel[]? devices;
+    private string? selectedDeviceId;
+    private Timer? timer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        timer = new Timer(async (object? stateInfo) =>
+        {
+            devices = await Http.GetFromJsonAsync<DeviceModel[]>("https://netgr8-functionapp.azurewebsites.net/api/devices?code=BlIhoJF_aqwLnfrDMfDp4Udifh8chleSgNQOC0RPCZ5DAzFuS5Tbxw==");
+            StateHasChanged();
+            
+        }, new AutoResetEvent(false), 0, 2000);
+    }
+
+    private void SetSelectedItem(string id)
+    {
+        selectedDeviceId = id;
+        StateHasChanged();
+    }
+}
