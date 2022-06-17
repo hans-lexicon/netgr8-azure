@@ -1,0 +1,40 @@
+﻿@page "/"
+
+
+
+
+<PageTitle>Device Management - Admin Center</PageTitle>
+
+<div class="d-flex">
+    <div class="device-management-list shadow pt-5 bg-white">
+        <div class="container px-4">
+            <SiteTitle Title="Device Management" SubTitle="Manage all of your devices in one place" />
+
+            @if (devices == null)
+            {
+                <p>Loading devices...</p>
+            }
+            else
+            {
+                @foreach(var item in devices)
+                {
+                    <DeviceItem Item="@item" />
+                }
+            }
+        </div>
+    </div>
+    <div class="device-management-details">
+        <DeviceItemDetails />
+    </div>
+</div>
+
+
+
+@code {
+    private DeviceItemModel[]? devices;
+
+    protected override async Task OnInitializedAsync()
+    {
+        devices = await Http.GetFromJsonAsync<DeviceItemModel[]>("https://netgr8-functionapp.azurewebsites.net/api/devices?code=GsLnYyJf63CbgmUxMDpUngj-8nAO-SU8VOdGhQLMVZGeAzFuNCY3xA==");
+    }
+}
